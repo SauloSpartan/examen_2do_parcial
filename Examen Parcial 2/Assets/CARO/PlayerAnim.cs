@@ -24,18 +24,30 @@ public class PlayerAnim : MonoBehaviour
 
     void Update()
     {
-        
+      
     }
 
     void WalkAnim()
     {
         if (player.playerMove)
         {
-            playerAnim.SetBool("Walk", true);
+            if(Input.GetKey("r"))
+            {
+                playerAnim.SetBool("Run", true);
+            }
+            if (!Input.GetKey("r"))
+            {
+                playerAnim.SetBool("Run", false);
+            }
+
+         
+        playerAnim.SetBool("Walk", true);
+        
         }
         else
         {
             playerAnim.SetBool("Walk", false);
         }
     }
+
 }
