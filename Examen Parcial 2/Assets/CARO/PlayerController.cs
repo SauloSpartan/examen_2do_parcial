@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate ()
     {
-        float mh = Input.GetAxis("Horizontal");
-        PlayerMove(mh);
+        float hh = Input.GetAxis("Horizontal");
+        PlayerMove(hh);
     }
 
     void Update()
@@ -29,9 +29,9 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void PlayerMove(float mh)
+    void PlayerMove(float hh)
     {
-        displacement.Set(mh,0f, 0f);
+        displacement.Set(-hh, 0f, 0f);
         displacement = displacement.normalized * playerSpeed * Time.deltaTime;
         rb.MovePosition(transform.position + displacement);
     }
