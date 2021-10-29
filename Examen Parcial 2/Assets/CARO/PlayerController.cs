@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float playerSpeed;
     public float playerRotate;
+    public bool playerMove = false;
     private Rigidbody rb;
     private Vector3 displacement;
 
@@ -39,6 +40,16 @@ public class PlayerController : MonoBehaviour
         if(hh!=0f)
         {
             PlayerRotate(hh);
+        }
+
+        bool playerRun = hh != 0f;
+        if(playerRun)
+        {
+            playerMove = true;
+        }
+        else
+        {
+            playerMove = false;
         }
     }
 
