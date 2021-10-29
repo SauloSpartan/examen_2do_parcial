@@ -24,8 +24,7 @@ public class ControladorPersonaje : MonoBehaviour
     {
         float hh = Input.GetAxis("Vertical");
         float hx = Input.GetAxis("Horizontal");
-        PlayerMove(hh);
-        PlayerMoveX(hx);         
+        PlayerMove(hh, hx); 
     }
 
     void Update()
@@ -33,18 +32,20 @@ public class ControladorPersonaje : MonoBehaviour
 
     }
 
-    void PlayerMove(float hh)
+    void PlayerMove(float hh, float hx)
     {
-        displacement.Set(0f, 0f, -hh);
+        displacement.Set(-hx, 0f, -hh);
         displacement = displacement.normalized * playerSpeed * Time.deltaTime;
         rb.MovePosition(transform.position + displacement);
 
-        if (hh != 0f)
+        if (hh != 0f || hx != 0f)
         {
-            PlayerRotate(hh);
+            PlayerRotate(hh, hx);
         }
 
-        bool playerRun = hh != 0f;
+        bool playerRun = hh != 0f || hx != 0f;
+
+
         if (playerRun)
         {
             playerMove = true;
@@ -55,43 +56,14 @@ public class ControladorPersonaje : MonoBehaviour
         }
     }
     
-    void PlayerMoveX(float hx)
-    {
-        displacement.Set(-hx, 0f, 0f);
-        displacement = displacement.normalized * playerSpeed * Time.deltaTime;
-        rb.MovePosition(transform.position + displacement);
-
-        if (hx != 0f)
-        {
-            PlayerRotateX(hx);
-        }
-
-        bool playerRun = hx != 0f;
-        if (playerRun)
-        {
-            playerMove = true;
-        }
-        else
-        {
-            playerMove = false;
-        }
-    }
-
-    void PlayerRotate(float hh)
+    
+    void PlayerRotate(float hh, float hx)
     {
         float interpolation = playerRotate * Time.deltaTime;
-        Vector3 targetDirection = new Vector3(0f, 0f, -hh);
+        Vector3 targetDirection = new Vector3(-hx, 0f, -hh);
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, interpolation);
         rb.MoveRotation(newRotation);
     }
 
-    void PlayerRotateX(float hx)
-    {
-        float interpolation = playerRotate * Time.deltaTime;
-        Vector3 targetDirection = new Vector3(-hx, 0f, 0f);
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-        Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, interpolation);
-        rb.MoveRotation(newRotation);
-    }
 }
