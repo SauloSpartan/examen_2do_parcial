@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MuertePersonaje : MonoBehaviour
 {
-    Animator anim;
+    Animator anim; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,4 @@ public class MuertePersonaje : MonoBehaviour
         
     }
 
-   
 }
