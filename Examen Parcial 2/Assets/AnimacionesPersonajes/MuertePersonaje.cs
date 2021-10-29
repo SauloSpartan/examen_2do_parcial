@@ -16,11 +16,10 @@ public class MuertePersonaje : MonoBehaviour
     {
         if (Input.GetKey("f"))
         {
-            anim.SetBool("IsAttack", true);
+            anim.SetTrigger("IsAttack");
         }
-        if (!Input.GetKey("f"))
-        {
-            anim.SetBool("IsAttack", false);
-        }
+        
     }
+
+   
 }
