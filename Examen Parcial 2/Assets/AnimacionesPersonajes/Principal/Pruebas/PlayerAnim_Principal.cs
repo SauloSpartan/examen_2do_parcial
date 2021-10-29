@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnim : MonoBehaviour
+public class PlayerAnim_Principal : MonoBehaviour
 {
-    private PlayerController player;
+    private ControladorPersonaje player;
     private Animator playerAnim;
-    
+
     void Awake()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<ControladorPersonaje>();
         playerAnim = GetComponent<Animator>();
     }
     void Start()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -24,14 +24,14 @@ public class PlayerAnim : MonoBehaviour
 
     void Update()
     {
-      
+
     }
 
     void WalkAnim()
     {
         if (player.playerMove)
         {
-            if(Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 playerAnim.SetBool("Run", true);
             }
@@ -40,9 +40,9 @@ public class PlayerAnim : MonoBehaviour
                 playerAnim.SetBool("Run", false);
             }
 
-         
-        playerAnim.SetBool("Walk", true);
-        
+
+            playerAnim.SetBool("Walk", true);
+
         }
         else
         {
