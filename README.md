@@ -9,7 +9,7 @@ Hizo el nivel 1, diseñó y ayudó en la programación de movimiento y enemigos
 Angel Emiliano Davalos Vazquez:
 Diseñó el Splash screen y Press enter además de darles funciones
 
-Carolina Buenrostro Castroso:
+Carolina Buenrostro Castro:
 Hizo el movimiento del personaje con animación
 
 Estefania Bruno Selva:
