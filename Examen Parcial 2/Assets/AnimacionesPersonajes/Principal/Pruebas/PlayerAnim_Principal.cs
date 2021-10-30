@@ -24,10 +24,7 @@ public class PlayerAnim_Principal : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("f"))
-        {
-            playerAnim.SetTrigger("IsAttack");
-        }
+
     }
 
     void WalkAnim()
