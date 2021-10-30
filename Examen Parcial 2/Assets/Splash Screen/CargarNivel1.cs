@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CargarNivel1 : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class CargarNivel1 : MonoBehaviour
     {
         if (Input.GetKeyDown("return"))
         {
-            //Application.LoadLevel( "Nivel1" );
+            SceneManager.LoadScene( "Nivel1" );
         }
     }
 }
