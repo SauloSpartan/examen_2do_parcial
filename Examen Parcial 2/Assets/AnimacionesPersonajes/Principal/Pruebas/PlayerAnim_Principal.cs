@@ -24,7 +24,10 @@ public class PlayerAnim_Principal : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKey("f"))
+        {
+            playerAnim.SetTrigger("IsAttack");
+        }
     }
 
     void WalkAnim()
@@ -49,5 +52,7 @@ public class PlayerAnim_Principal : MonoBehaviour
             playerAnim.SetBool("Walk", false);
         }
     }
+
+    
 
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemigoMuerte : MonoBehaviour
 {
     Animator E_animator;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,11 @@ public class EnemigoMuerte : MonoBehaviour
         {
             //E_animator.SetBool("IsDeath", true);
             E_animator.SetTrigger("IsDeath2");
+
+            Destroy(gameObject, 8f);
         }
+
+
 
     }
 }

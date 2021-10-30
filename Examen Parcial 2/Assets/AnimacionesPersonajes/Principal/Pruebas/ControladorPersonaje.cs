@@ -24,13 +24,16 @@ public class ControladorPersonaje : MonoBehaviour
     {
         float hh = Input.GetAxis("Vertical");
         float hx = Input.GetAxis("Horizontal");
-        PlayerMove(hh, hx); 
+        PlayerMove(hh, hx);
+        
     }
 
     void Update()
     {
 
     }
+
+   
 
     void PlayerMove(float hh, float hx)
     {
