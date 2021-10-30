@@ -4,16 +4,16 @@ Examen Segundo Parcial
 Triplerspective:
 
 Jesus Gabriel Tapia Diaz:
-Nivel 1, diseño y ayudó en la programación de movimiento y enemigos
+Hizo el nivel uno Nivel 1, diseñó y ayudó en la programación de movimiento y enemigos
 
 Angel Emiliano Davalos Vazquez:
-Diseño de Splash screen y Press enter funcionales
+Diseñó el Splash screen y Press enter además de darles funciones
 
 Carolina Buenrostro Castroso:
-Movimiento del personaje con animación
+Hizo el movimiento del personaje con animación
 
 Estefania Bruno Selva:
-Muerte de los enemigos por colisión y animaciones
+Programó la muerte de los enemigos por colisión y animaciones
 
 Saulo Azael Trujillo Gonzalez
-Modelos con rigg y ayudó en los errores que surgian en el proyecto
+Hizo los modelos con rigg y ayudó en los errores que surgian en el proyecto
