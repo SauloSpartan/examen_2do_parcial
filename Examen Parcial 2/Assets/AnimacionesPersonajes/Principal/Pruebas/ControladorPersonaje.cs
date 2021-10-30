@@ -38,9 +38,9 @@ public class ControladorPersonaje : MonoBehaviour
         displacement = displacement.normalized * playerSpeed * Time.deltaTime;
         rb.MovePosition(transform.position + displacement);
 
-        if (hh != 0f || hx != 0f)
+        if (hx != 0f)
         {
-            PlayerRotate(hh, hx);
+            PlayerRotate(hx);
         }
 
         bool playerRun = hh != 0f || hx != 0f;
@@ -57,10 +57,10 @@ public class ControladorPersonaje : MonoBehaviour
     }
     
     
-    void PlayerRotate(float hh, float hx)
+    void PlayerRotate(float hx)
     {
         float interpolation = playerRotate * Time.deltaTime;
-        Vector3 targetDirection = new Vector3(-hx, 0f, -hh);
+        Vector3 targetDirection = new Vector3(-hx, 0f, 0f);
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
         Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, interpolation);
         rb.MoveRotation(newRotation);
