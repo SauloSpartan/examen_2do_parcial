@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Press Enter.unity
+    path: Assets/Escenas/Press Enter.unity
     guid: de78c29381bc0e241ba53ce946df4a4a
   - enabled: 1
-    path: Assets/Nivel1.unity
+    path: Assets/Escenas/Nivel1.unity
     guid: faf8050565f32d2438ce1df0c9b0a6d6
   m_configObjects: {}
